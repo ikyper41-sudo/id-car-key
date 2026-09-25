@@ -43,12 +43,12 @@ const productsData = [
     },
     {
         id: 5,
-        title: "Keyless Yamaha R15",
-        category: "motor",
-        compat: "Compatible: R15, Vixion, MT-15",
-        price: 1100000,
-        image: "assets/images/prod-r15.jpg",
-        badge: "Keyless Motor"
+        title: "Keyless Mitsubishi Pajero",
+        category: "mobil",
+        compat: "Compatible: Pajero Sport, Triton",
+        price: 1450000,
+        image: "assets/images/prod-pajero.jpg",
+        badge: "Keyless Mobil"
     }
 ];
 
@@ -130,7 +130,7 @@ function renderProducts(filter = 'all') {
                 <p class="product-compat">${p.compat}</p>
                 <div class="product-price">${formatRupiah(p.price)}</div>
                 <button class="btn btn-primary add-cart-btn" onclick="addToCart(${p.id})">
-                    <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+                    <i class="fa-solid fa-cart-plus"></i>  Pesan
                 </button>
             </div>
         `;
