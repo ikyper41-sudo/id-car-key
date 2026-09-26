@@ -41,7 +41,7 @@ const productsData = [
         image: "assets/images/prod-beat.jpg",
         badge: "Keyless Motor"
     },
-    {
+   {
         id: 5,
         title: "Keyless Mitsubishi Pajero",
         category: "mobil",
@@ -54,11 +54,6 @@ const productsData = [
 
 // App State
 let cart = JSON.parse(localStorage.getItem('IDCKEY_CART')) || [];
-
-// Helper: Format Rupiah
-function formatRupiah(number) {
-    return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(number);
-}
 
 // DOM Loaded Initialization
 document.addEventListener('DOMContentLoaded', () => {
@@ -128,9 +123,8 @@ function renderProducts(filter = 'all') {
             <div class="product-info">
                 <h3 class="product-title">${p.title}</h3>
                 <p class="product-compat">${p.compat}</p>
-                <div class="product-price">${formatRupiah(p.price)}</div>
                 <button class="btn btn-primary add-cart-btn" onclick="addToCart(${p.id})">
-                    <i class="fa-solid fa-cart-plus"></i>  Pesan
+                    <i class="fa-solid fa-cart-plus"></i> Pesan
                 </button>
             </div>
         `;
@@ -190,7 +184,7 @@ function addToCart(productId) {
     saveCart();
     updateCartUI();
     
-    // Auto open cart
+    // Auto open cart drawer
     document.getElementById('cart-drawer').classList.add('open');
     document.getElementById('cart-drawer-overlay').classList.add('active');
 }
@@ -216,19 +210,16 @@ function updateCartUI() {
     const cartBody = document.getElementById('cart-drawer-body');
     const cartBadge = document.getElementById('cart-badge-count');
     const totalCountEl = document.getElementById('cart-total-count');
-    const totalPriceEl = document.getElementById('cart-total-price');
 
     cartBody.innerHTML = '';
 
     let totalQty = 0;
-    let totalPrice = 0;
 
     if (cart.length === 0) {
         cartBody.innerHTML = '<p class="text-center" style="color: var(--text-sub); margin-top: 2rem;">Keranjang belanja Anda kosong.</p>';
     } else {
         cart.forEach(item => {
             totalQty += item.qty;
-            totalPrice += item.price * item.qty;
 
             const itemEl = document.createElement('div');
             itemEl.className = 'cart-item';
@@ -236,7 +227,6 @@ function updateCartUI() {
                 <img src="${item.image}" alt="${item.title}" class="cart-item-img">
                 <div class="cart-item-info">
                     <div class="cart-item-title">${item.title}</div>
-                    <div class="cart-item-price">${formatRupiah(item.price)}</div>
                     <div class="cart-qty-ctrl">
                         <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
                         <span class="qty-count">${item.qty}</span>
@@ -250,7 +240,6 @@ function updateCartUI() {
 
     cartBadge.textContent = totalQty;
     totalCountEl.textContent = totalQty;
-    totalPriceEl.textContent = formatRupiah(totalPrice);
 }
 
 function checkoutWhatsApp() {
@@ -259,19 +248,16 @@ function checkoutWhatsApp() {
         return;
     }
 
-    let message = "Halo ID CAR KEY, saya ingin membeli:\n\n";
-    let total = 0;
+    let message = "Halo ID CAR KEY, saya ingin memesan kunci keyless berikut:\n\n";
 
     cart.forEach(item => {
-        const itemSubtotal = item.price * item.qty;
-        total += itemSubtotal;
-        message += `• ${item.title}\n  Jumlah: ${item.qty}\n  Harga: ${formatRupiah(itemSubtotal)}\n\n`;
+        message += `• ${item.title}\n  Jumlah: ${item.qty} pcs\n\n`;
     });
 
-    message += `*Total: ${formatRupiah(total)}*\n\nMohon informasi selanjutnya.`;
+    message += "Mohon informasi ketersediaan stok dan prosedur selanjutnya.";
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/6281234567890?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/6281361164123?text=${encodedMessage}`, '_blank');
 }
 
 /* --------------------------------------------------------------------------
@@ -319,10 +305,10 @@ function initSearch() {
                 <img src="${p.image}" alt="${p.title}" class="cart-item-img">
                 <div class="cart-item-info">
                     <div class="cart-item-title">${p.title}</div>
-                    <div class="cart-item-price">${formatRupiah(p.price)}</div>
+                    <div class="product-compat" style="margin-bottom: 0;">${p.compat}</div>
                 </div>
                 <button class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;" onclick="addToCart(${p.id}); document.getElementById('search-modal').classList.remove('active');">
-                    Beli
+                    Pesan
                 </button>
             `;
             resultsContainer.appendChild(item);
@@ -346,7 +332,6 @@ function initFAQ() {
                 i.classList.remove('active');
                 i.querySelector('.faq-answer').style.maxHeight = null;
             });
-
             // Open clicked if was not active
             if (!isActive) {
                 item.classList.add('active');
