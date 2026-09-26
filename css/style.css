@@ -12,9 +12,9 @@
     --bg-dark-2: #081018;
     --bg-dark-3: #0B141D;
     
-    --card-bg: rgba(11, 20, 29, 0.7);
-    --card-border: rgba(22, 139, 255, 0.15);
-    --card-border-hover: rgba(22, 139, 255, 0.5);
+    --card-bg: rgba(11, 20, 29, 0.75);
+    --card-border: rgba(22, 139, 255, 0.18);
+    --card-border-hover: rgba(22, 139, 255, 0.55);
     
     --accent-blue-1: #008CFF;
     --accent-blue-2: #168BFF;
@@ -30,7 +30,7 @@
     --font-script: 'Reenie Beanie', cursive;
     
     /* Layout */
-    --max-width: 1440px;
+    --max-width: 1480px;
     --header-height: 80px;
     --radius-sm: 8px;
     --radius-md: 12px;
@@ -197,6 +197,7 @@ button {
     z-index: 1000;
     background: rgba(5, 11, 16, 0.85);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
 }
@@ -281,6 +282,9 @@ button {
     justify-content: space-between;
     width: 28px;
     height: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .hamburger-btn span {
@@ -303,7 +307,7 @@ button {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation Drawer */
 .mobile-menu {
     position: fixed;
     top: var(--header-height);
@@ -726,16 +730,8 @@ button {
 .product-compat {
     font-size: 0.78rem;
     color: var(--text-sub);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     word-break: break-word;
-}
-
-.product-price {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--accent-blue-2);
-    margin-top: auto;
-    margin-bottom: 1rem;
 }
 
 .add-cart-btn {
@@ -743,6 +739,7 @@ button {
     padding: 0.65rem;
     font-size: 0.85rem;
     border-radius: var(--radius-sm);
+    margin-top: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -877,6 +874,9 @@ button {
     position: relative;
     z-index: 2;
     padding: 3.5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .cta-heading {
@@ -960,6 +960,7 @@ button {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 1050;
     opacity: 0;
     visibility: hidden;
@@ -1031,12 +1032,6 @@ button {
     font-weight: 700;
 }
 
-.cart-item-price {
-    font-size: 0.85rem;
-    color: var(--accent-blue-2);
-    font-weight: 700;
-}
-
 .cart-qty-ctrl {
     display: flex;
     align-items: center;
@@ -1067,23 +1062,6 @@ button {
     background: var(--bg-dark-3);
 }
 
-.cart-summary-line {
-    font-size: 0.9rem;
-    color: var(--text-sub);
-    margin-bottom: 0.5rem;
-}
-
-.cart-total-price-line {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--text-white);
-    margin-bottom: 1.2rem;
-}
-
-.cart-total-price {
-    color: var(--accent-blue-2);
-}
-
 /* Search Modal */
 .search-modal {
     position: fixed;
@@ -1093,6 +1071,7 @@ button {
     height: 100%;
     background: rgba(5, 11, 16, 0.9);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1200;
     opacity: 0;
     visibility: hidden;
@@ -1241,6 +1220,12 @@ button {
     color: var(--text-sub);
 }
 
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footer-motto {
     font-family: var(--font-script);
     font-size: 1.2rem;
@@ -1314,7 +1299,7 @@ button {
     }
 
     .product-image-box {
-        height: 130px;
+        height: 140px;
     }
 
     .product-info {
@@ -1329,12 +1314,7 @@ button {
 
     .product-compat {
         font-size: 0.72rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .product-price {
-        font-size: 0.95rem;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
     }
 
     .add-cart-btn {
@@ -1403,4 +1383,16 @@ button {
         gap: 0.5rem;
         text-align: center;
     }
+}
+
+/* --------------------------------------------------------------------------
+   14. CARA 1: HIDE HARGA VISUALLY VIA CSS
+   -------------------------------------------------------------------------- */
+.product-price,
+.cart-item-price,
+.cart-summary-line,
+.cart-total-price-line,
+.cart-subtotal,
+.cart-total {
+    display: none !important;
 }
