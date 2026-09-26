@@ -5,12 +5,12 @@
 
 // Sample Product Data
 const productsData = [
+    // ================= KATEGORI MOBIL (28 PRODUK) =================
     {
         id: 1,
         title: "Keyless Toyota All New Avanza",
         category: "mobil",
         compat: "Compatible: Avanza, Veloz, Rush",
-        price: 1250000,
         image: "assets/images/prod-avanza.jpg",
         badge: "Keyless Mobil"
     },
@@ -19,36 +19,234 @@ const productsData = [
         title: "Keyless Honda HR-V",
         category: "mobil",
         compat: "Compatible: HR-V, BR-V, CR-V",
-        price: 1350000,
         image: "assets/images/prod-hrv.jpg",
         badge: "Keyless Mobil"
     },
     {
         id: 3,
+        title: "Keyless Mitsubishi Pajero",
+        category: "mobil",
+        compat: "Compatible: Pajero Sport, Triton",
+        image: "assets/images/prod-pajero.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 4,
+        title: "Keyless Toyota Innova Zenix",
+        category: "mobil",
+        compat: "Compatible: Innova Zenix, Reborn, Venturer",
+        image: "assets/images/prod-zenix.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 5,
+        title: "Keyless Honda Brio",
+        category: "mobil",
+        compat: "Compatible: Brio RS, Mobilio, Jazz GK5",
+        image: "assets/images/prod-brio.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 6,
+        title: "Keyless Mitsubishi Xpander",
+        category: "mobil",
+        compat: "Compatible: Xpander, Xpander Cross",
+        image: "assets/images/prod-xpander.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 7,
+        title: "Keyless Daihatsu Rocky",
+        category: "mobil",
+        compat: "Compatible: Rocky, Raize, Xenia",
+        image: "assets/images/prod-rocky.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 8,
+        title: "Keyless Nissan Serena",
+        category: "mobil",
+        compat: "Compatible: Serena C26/C27, X-Trail T32",
+        image: "assets/images/prod-serena.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 9,
+        title: "Keyless Toyota Fortuner",
+        category: "mobil",
+        compat: "Compatible: Fortuner VRZ, Hilux",
+        image: "assets/images/prod-fortuner.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 10,
+        title: "Keyless Hyundai Creta",
+        category: "mobil",
+        compat: "Compatible: Creta, Stargazer, Santa Fe",
+        image: "assets/images/prod-creta.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 11,
+        title: "Keyless Suzuki Ertiga Hybrid",
+        category: "mobil",
+        compat: "Compatible: Ertiga, XL7 Hybrid",
+        image: "assets/images/prod-ertiga.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 12,
+        title: "Keyless Honda Civic Turbo",
+        category: "mobil",
+        compat: "Compatible: Civic FE/FC, Accord Turbo",
+        image: "assets/images/prod-civic.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 13,
+        title: "Keyless Toyota Alphard",
+        category: "mobil",
+        compat: "Compatible: Alphard, Vellfire Gen 3",
+        image: "assets/images/prod-alphard.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 14,
+        title: "Keyless Wuling Almaz",
+        category: "mobil",
+        compat: "Compatible: Almaz RS, Cortez, Air EV",
+        image: "assets/images/prod-almaz.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 15,
+        title: "Keyless Mazda CX-5",
+        category: "mobil",
+        compat: "Compatible: CX-5, CX-3, Mazda 2 Skyactiv",
+        image: "assets/images/prod-cx5.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 16,
+        title: "Keyless Toyota Yaris Cross",
+        category: "mobil",
+        compat: "Compatible: Yaris Cross, Agya GR",
+        image: "assets/images/prod-yaris.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 17,
+        title: "Keyless Daihatsu Terios",
+        category: "mobil",
+        compat: "Compatible: Terios, All New Rush",
+        image: "assets/images/prod-terios.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 18,
+        title: "Keyless Nissan Livina",
+        category: "mobil",
+        compat: "Compatible: Grand Livina, All New Livina",
+        image: "assets/images/prod-livina.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 19,
+        title: "Keyless Suzuki Baleno",
+        category: "mobil",
+        compat: "Compatible: Baleno Hatchback, Grand Vitara",
+        image: "assets/images/prod-baleno.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 20,
+        title: "Keyless Honda City Hatchback",
+        category: "mobil",
+        compat: "Compatible: City Hatchback RS, City Sedan",
+        image: "assets/images/prod-city.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 21,
+        title: "Keyless Toyota Agya GR",
+        category: "mobil",
+        compat: "Compatible: Agya, Calya (Convert Keyless)",
+        image: "assets/images/prod-agya.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 22,
+        title: "Keyless Daihatsu Ayla",
+        category: "mobil",
+        compat: "Compatible: Ayla, Sigra (Convert Keyless)",
+        image: "assets/images/prod-ayla.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 23,
+        title: "Keyless Honda CR-V Turbo",
+        category: "mobil",
+        compat: "Compatible: CR-V RW, Odyssey",
+        image: "assets/images/prod-crv.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 24,
+        title: "Keyless Toyota Raize",
+        category: "mobil",
+        compat: "Compatible: Raize Turbo, Rocky",
+        image: "assets/images/prod-raize.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 25,
+        title: "Keyless Suzuki Jimny 3D/5D",
+        category: "mobil",
+        compat: "Compatible: Jimny JB74, Ignis",
+        image: "assets/images/prod-jimny.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 26,
+        title: "Keyless Hyundai Ioniq 5",
+        category: "mobil",
+        compat: "Compatible: Ioniq 5, Ioniq 6, Kona EV",
+        image: "assets/images/prod-ioniq.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 27,
+        title: "Keyless Mitsubishi Outlander",
+        category: "mobil",
+        compat: "Compatible: Outlander Sport, Eclipse Cross",
+        image: "assets/images/prod-outlander.jpg",
+        badge: "Keyless Mobil"
+    },
+    {
+        id: 28,
+        title: "Keyless Chery Omoda 5",
+        category: "mobil",
+        compat: "Compatible: Omoda 5, Tiggo 7 Pro, Tiggo 8",
+        image: "assets/images/prod-omoda.jpg",
+        badge: "Keyless Mobil"
+    },
+
+    // ================= KATEGORI MOTOR (2 PRODUK) =================
+    {
+        id: 29,
         title: "Keyless Yamaha NMAX",
         category: "motor",
-        compat: "Compatible: NMAX, Aerox, Lexi",
-        price: 850000,
+        compat: "Compatible: NMAX Turbo, Neo, Aerox",
         image: "assets/images/prod-nmax.jpg",
         badge: "Keyless Motor"
     },
     {
-        id: 4,
-        title: "Keyless Honda Beat",
+        id: 30,
+        title: "Keyless Honda PCX 160",
         category: "motor",
-        compat: "Compatible: Beat, Scoopy, Genio",
-        price: 750000,
+        compat: "Compatible: PCX 150/160, ADV 150/160",
         image: "assets/images/prod-beat.jpg",
         badge: "Keyless Motor"
-    },
-   {
-        id: 5,
-        title: "Keyless Mitsubishi Pajero",
-        category: "mobil",
-        compat: "Compatible: Pajero Sport, Triton",
-        price: 1450000,
-        image: "assets/images/prod-pajero.jpg",
-        badge: "Keyless Mobil"
     }
 ];
 
