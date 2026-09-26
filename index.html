@@ -81,7 +81,7 @@
             <div class="search-header">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="text" id="search-input" placeholder="Cari tipe kendaraan atau produk (misal: Avanza, NMAX, Honda)..." autocomplete="off">
-                <button class="close-search-btn" id="close-search-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="close-search-btn" id="close-search-btn" aria-label="Tutup Pencarian"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="search-results-container" id="search-results-container">
                 <p class="search-placeholder-text">Ketik kata kunci untuk mencari produk keyless...</p>
@@ -177,38 +177,40 @@
                 </div>
 
                 <!-- Brand Slider / List -->
-               <div class="brand-section">
-    <p class="brand-title">Cocok untuk berbagai merek:</p>
-    <div class="brand-grid">
-        <div class="brand-item">
-            <img src="assets/images/brands/toyota.png" alt="Logo Toyota" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item">
-            <img src="assets/images/brands/honda.png" alt="Logo Honda" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item">
-            <img src="assets/images/brands/daihatsu.png" alt="Logo Daihatsu" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item">
-            <img src="assets/images/brands/suzuki.png" alt="Logo Suzuki" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item">
-            <img src="assets/images/brands/mitsubishi.png" alt="Logo Mitsubishi" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item">
-            <img src="assets/images/brands/nissan.png" alt="Logo Nissan" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item">
-            <img src="assets/images/brands/yamaha.png" alt="Logo Yamaha" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item">
-            <img src="assets/images/brands/hondam.png" alt="Logo honda motor" class="brand-logo-img" loading="lazy">
-        </div>
-        <div class="brand-item brand-more">
-            <a href="#kontak">Dan banyak lagi... <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </div>
-</div>
+                <div class="brand-section">
+                    <p class="brand-title">Cocok untuk berbagai merek:</p>
+                    <div class="brand-grid">
+                        <div class="brand-item">
+                            <img src="assets/images/brands/toyota.png" alt="Logo Toyota" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/images/brands/honda.png" alt="Logo Honda" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/images/brands/daihatsu.png" alt="Logo Daihatsu" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/images/brands/suzuki.png" alt="Logo Suzuki" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/images/brands/mitsubishi.png" alt="Logo Mitsubishi" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/images/brands/nissan.png" alt="Logo Nissan" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/images/brands/yamaha.png" alt="Logo Yamaha" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/images/brands/hondam.png" alt="Logo Honda Motor" class="brand-logo-img" loading="lazy">
+                        </div>
+                        <div class="brand-item brand-more">
+                            <a href="#kontak">Dan banyak lagi... <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ==================== FEATURED PRODUCTS ==================== -->
         <section class="section product-section" id="produk">
@@ -226,7 +228,7 @@
                 </div>
 
                 <div class="product-grid" id="product-grid">
-                    <!-- Produk render via JS -->
+                    <!-- Produk dirender otomatis via JavaScript -->
                 </div>
             </div>
         </section>
@@ -237,7 +239,6 @@
                 <div class="service-card-wrapper">
                     <div class="service-image-container">
                         <img src="assets/images/custom-service.jpg" alt="Layanan Keyless Custom" loading="lazy">
-                        <div class="service-image-overlay"></div>
                     </div>
                     <div class="service-content-container">
                         <h2 class="service-title">Layanan Keyless Custom</h2>
@@ -295,7 +296,7 @@
             </div>
         </section>
 
-        <!-- ==================== ABOUT & FAQ SECTION ==================== -->
+        <!-- ==================== FAQ SECTION ==================== -->
         <section class="section faq-section" id="faq">
             <div class="container">
                 <div class="section-header text-center">
@@ -374,21 +375,17 @@
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-drawer-header flex-between">
             <h3><i class="fa-solid fa-cart-shopping"></i> Keranjang Belanja</h3>
-            <button class="close-cart-btn" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+            <button class="close-cart-btn" id="close-cart-btn" aria-label="Tutup Keranjang"><i class="fa-solid fa-xmark"></i></button>
         </div>
 
         <div class="cart-drawer-body" id="cart-drawer-body">
-            <!-- Cart Items Rendered Dynamically -->
+            <!-- Items dirender otomatis via JavaScript -->
         </div>
 
         <div class="cart-drawer-footer">
             <div class="cart-summary-line flex-between">
-                <span>Total Items:</span>
+                <span>Total Item:</span>
                 <span id="cart-total-count">0</span>
-            </div>
-            <div class="cart-summary-line flex-between cart-total-price-line">
-                <span>Total:</span>
-                <span class="cart-total-price" id="cart-total-price">Rp 0</span>
             </div>
             <button class="btn btn-primary btn-full checkout-wa-btn" id="checkout-wa-btn">
                 <i class="fa-brands fa-whatsapp"></i> Checkout via WhatsApp
@@ -452,6 +449,7 @@
 
         <div class="footer-bottom">
             <div class="container flex-between footer-bottom-content">
+                <p>© 2024 ID CAR KEY. All rights reserved.</p>
                 <p class="footer-motto">Kunci Modern untuk Mobil & Motor Kesayangan Anda.</p>
             </div>
         </div>
